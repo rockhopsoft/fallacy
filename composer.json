@@ -1,0 +1,33 @@
+{
+    "name": "wikiworldorder/fallacy",
+    "description": "Don't Fallacy Me is a free, collaborative, multiplayer mind game! It provides an example, and you select the clearest logical fallacy.",
+    "keywords": [
+    	"laravel", 
+    	"SurvLoop", 
+    	"Don't Fallacy Me Bro",
+    	"logical fallacy", 
+    	"games", 
+    	"multiplayer", 
+    	"crowd-sourced", 
+    	"critical thinking", 
+    	"logical fallacies", 
+    	"brain games"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Morgan Lesko",
+            "homepage": "https://github.com/wikiworldorder/fallacy",
+            "email": "wikiworldorder@protonmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "wikiworldorder/survloop": "0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fallacy\\": "src/"
+        }
+    }
+}

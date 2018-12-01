@@ -14,8 +14,8 @@ use SurvLoop\Controllers\SurvFormTree;
 class Fallacy extends SurvFormTree
 {
     
-    public $classExtension         = 'Fallacy';
-    public $treeID                 = 1;
+    public $classExtension = 'Fallacy';
+    public $treeID         = 1;
     
     // Initializing a bunch of things which are not [yet] automatically determined by the software
     protected function initExtra(Request $request)
@@ -52,13 +52,7 @@ class Fallacy extends SurvFormTree
         if (trim($coreTbl) == '') $coreTbl = $GLOBALS["SL"]->coreTbl;
         $this->allPublicCoreIDs = [];
         if ($coreTbl == 'Nonprofit') {
-            $list = KGNonprofit::whereNotNull('NonName')
-                ->where('NonName', 'NOT LIKE', '')
-                ->select('NonID')
-                ->get();
-            if ($list->isNotEmpty()) {
-                foreach ($list as $l) $this->allPublicCoreIDs[] = $l->NonID;
-            }
+        
         }
         return $this->allPublicCoreIDs;
     }
@@ -67,7 +61,7 @@ class Fallacy extends SurvFormTree
     protected function customNodePrint($nID = -3, $tmpSubTier = [], $nIDtxt = '', $nSffx = '', $currVisib = 1)
     {
         $ret = '';
-        if ($nID == 262) {
+        if ($nID == 1) {
             
         }
         return $ret;
@@ -76,6 +70,8 @@ class Fallacy extends SurvFormTree
     public function printPreviewReportCustom($isAdmin = false)
     {
         if (!isset($this->sessData->dataSets[$GLOBALS["SL"]->coreTbl])) return '';
+        
+        
         return '';
     }
     

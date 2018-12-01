@@ -13,8 +13,8 @@ use SurvLoop\Controllers\AdminSubsController;
 
 class FallacyAdmin extends AdminSubsController
 {
-    public $classExtension     = 'FallacyAdmin';
-    public $treeID             = 1;
+    public $classExtension = 'FallacyAdmin';
+    public $treeID         = 1;
     
     public function initPowerUser($uID = -3)
     {
@@ -37,15 +37,10 @@ class FallacyAdmin extends AdminSubsController
     {
         $treeMenu = [];
         if ($this->v["user"]->hasRole('administrator|staff|databaser|brancher|volunteer')) {
-            $treeMenu[] = $this->admMenuLnk('javascript:;', 'Businesses', 
+            $treeMenu[] = $this->admMenuLnk('javascript:;', 'Fallacies', 
                 '<i class="fa fa-building-o" aria-hidden="true"></i>', 1, [
-                $this->admMenuLnk('javascript:;', 'All Businesses'),
-                $this->admMenuLnk('javascript:;', 'Manage Invites')
-                ]);
-            $treeMenu[] = $this->admMenuLnk('javascript:;', 'Consumers', 
-                '<i class="fa fa-usd mL3" aria-hidden="true"></i>', 1, [
-                $this->admMenuLnk('javascript:;', 'Raw Consumer Data'),
-                $this->admMenuLnk('javascript:;', 'Consumer Analysis')
+                $this->admMenuLnk('javascript:;', 'All Fallacy Examples'),
+                $this->admMenuLnk('javascript:;', 'Manage Fallacies')
                 ]);
             if (!$this->v["user"]->hasRole('volunteer')) return $this->addAdmMenuBasics($treeMenu);
         }

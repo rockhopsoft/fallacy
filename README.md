@@ -12,6 +12,16 @@ simply being wrong about the facts.  The Don't Fallacy Me database has been rebu
 <a href="https://laravel.com/" target="_blank">Laravel</a>-based engine for designing a 
 database and creating a mobile-friendly user interface to fill it. 
 
+Part of my re-build is to migrate the game to the software I've been focused on building for the past three years. 
+But the more important part is a redesign of the user experience, since upon launch the site made it to page three of 
+a 'design fails' sub-Reddit. The game needs work perfectly for mobile devices.
+
+So if you have any skills with design or graphics that would be an amazing collaboration. It would also be amazing to 
+find sharp minds to help create an arsenal of memes, which drove tons of traffic to the site for its first few months. 
+And of course, folks can always help more by adding examples to the crowd-sourced collection.
+
+Let me know if getting more involved in this project would interest you! wikiworldorder *at* protonmail.com
+
 # Table of Contents
 * [Requirements](#requirements)
 * [Getting Started](#getting-started)

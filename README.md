@@ -7,8 +7,8 @@
 
 Don't Fallacy Me is a free, collaborative, multiplayer mind game! It provides an example, and you select the clearest 
 logical fallacy. A fallacy is, very generally, an error in reasoning. This differs from a factual error, which is 
-simply being wrong about the facts.  The Don't Fallacy Me database has been rebuilt using 
-<a href="https://github.com/wikiworldorder/survloop" target="_blank">SurvLoop</a>, a 
+simply being wrong about the facts.  The Don't Fallacy Me database is being rebuilt using 
+<a href="https://github.com/wikiworldorder/survloop" target="_blank">SurvLoop</a>, Wiki World Order's 
 <a href="https://laravel.com/" target="_blank">Laravel</a>-based engine for designing a 
 database and creating a mobile-friendly user interface to fill it. 
 

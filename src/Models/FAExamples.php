@@ -11,6 +11,7 @@ class FAExamples extends Model
     protected $fillable   = 
     [    
 		'ExaType', 
+		'ExaStatement', 
 		'ExaSourceUrl', 
 		'ExaTotRight', 
 		'ExaTotWrong', 

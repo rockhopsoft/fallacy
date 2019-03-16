@@ -10,16 +10,17 @@ class FAExampleImages extends Model
     public $timestamps    = true;
     protected $fillable   = 
     [    
+		'ExaImgUserID', 
+		'ExaImgStatus', 
+		'ExaImgFilename', 
+		'ExaImgName', 
+		'ExaImgCopyright', 
 		'ExaImgVersionAB', 
 		'ExaImgSubmissionProgress', 
-		'ExaImgFilename', 
 		'ExaImgIPaddy', 
 		'ExaImgTreeVersion', 
 		'ExaImgUniqueStr', 
-		'ExaImgUserID', 
 		'ExaImgIsMobile', 
-		'ExaImgName', 
-		'ExaImgCopyright', 
     ];
     
     // END SurvLoop auto-generated portion of Model

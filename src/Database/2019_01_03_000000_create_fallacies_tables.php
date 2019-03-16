@@ -31,13 +31,6 @@ class FACreateTables extends Migration
 			$table->integer('PlaSubmissionProgress')->nullable();
 			$table->timestamps();
 		});
-		Schema::create('FA_FallacySimilar', function(Blueprint $table)
-		{
-			$table->increments('FalSimID');
-			$table->integer('FalSimFallacyID1')->unsigned()->nullable();
-			$table->integer('FalSimFallacyID2')->unsigned()->nullable();
-			$table->timestamps();
-		});
 		Schema::create('FA_GameResponses', function(Blueprint $table)
 		{
 			$table->increments('ResID');
@@ -62,7 +55,7 @@ class FACreateTables extends Migration
 		Schema::create('FA_Fallacies', function(Blueprint $table)
 		{
 			$table->increments('FalID');
-			$table->integer('FalCategoryType')->nullable();
+			$table->integer('FalCategoryType')->unsigned()->nullable();
 			$table->string('FalEnglish')->nullable();
 			$table->string('FalLatin')->nullable();
 			$table->longText('FalAka')->nullable();
@@ -85,10 +78,18 @@ class FACreateTables extends Migration
 			$table->integer('FalParChildID')->unsigned()->nullable();
 			$table->timestamps();
 		});
+		Schema::create('FA_FallacySimilar', function(Blueprint $table)
+		{
+			$table->increments('FalSimID');
+			$table->integer('FalSimFallacyID1')->unsigned()->nullable();
+			$table->integer('FalSimFallacyID2')->unsigned()->nullable();
+			$table->timestamps();
+		});
 		Schema::create('FA_Examples', function(Blueprint $table)
 		{
 			$table->increments('ExaID');
 			$table->integer('ExaType')->unsigned()->nullable();
+			$table->longText('ExaStatement')->nullable();
 			$table->string('ExaSourceUrl')->nullable();
 			$table->integer('ExaTotRight')->nullable();
 			$table->integer('ExaTotWrong')->nullable();
@@ -120,16 +121,17 @@ class FACreateTables extends Migration
 		Schema::create('FA_ExampleImages', function(Blueprint $table)
 		{
 			$table->increments('ExaImgID');
+			$table->integer('ExaImgUserID')->unsigned()->nullable();
+			$table->integer('ExaImgStatus')->unsigned()->nullable();
+			$table->string('ExaImgFilename')->nullable();
+			$table->string('ExaImgName')->nullable();
+			$table->string('ExaImgCopyright')->nullable();
 			$table->string('ExaImgVersionAB')->nullable();
 			$table->integer('ExaImgSubmissionProgress')->nullable();
-			$table->string('ExaImgFilename')->nullable();
 			$table->string('ExaImgIPaddy')->nullable();
 			$table->string('ExaImgTreeVersion')->nullable();
 			$table->string('ExaImgUniqueStr')->nullable();
-			$table->integer('ExaImgUserID')->unsigned()->nullable();
 			$table->string('ExaImgIsMobile')->nullable();
-			$table->string('ExaImgName')->nullable();
-			$table->string('ExaImgCopyright')->nullable();
 			$table->timestamps();
 		});
 		Schema::create('FA_UserStats', function(Blueprint $table)
@@ -159,12 +161,12 @@ class FACreateTables extends Migration
     public function down()
     {
     	Schema::drop('FA_GamePlays');
-		Schema::drop('FA_FallacySimilar');
 		Schema::drop('FA_GameResponses');
 		Schema::drop('FA_GameSessions');
 		Schema::drop('FA_Fallacies');
 		Schema::drop('FA_FallacyVideos');
 		Schema::drop('FA_FallacyParents');
+		Schema::drop('FA_FallacySimilar');
 		Schema::drop('FA_Examples');
 		Schema::drop('FA_ExampleAnswers');
 		Schema::drop('FA_ExampleImgLnks');

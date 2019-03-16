@@ -13,15 +13,7 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/admin', [
-        'uses' => 'Fallacy\Controllers\FallacyAdmin@dashHome', 
-        'middleware' => ['auth']
-    ]);
-    
-    Route::get('/dashboard', [
-        'uses' => 'Fallacy\Controllers\FallacyAdmin@dashHome', 
-        'middleware' => ['auth']
-    ]);
+        //
 
 });    
 

@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 use Fallacy\Controllers\FallacyReport;
-use SurvLoop\Controllers\SurvFormTree;
+use SurvLoop\Controllers\TreeSurvForm;
 
-class Fallacy extends SurvFormTree
+class Fallacy extends TreeSurvForm
 {
     
     public $classExtension = 'Fallacy';

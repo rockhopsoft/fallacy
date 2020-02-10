@@ -2,13 +2,13 @@
 # WikiWorldOrder/Fallacy
 
 [![Laravel](https://img.shields.io/badge/Laravel-5.7-orange.svg?style=flat-square)](http://laravel.com)
-[![SurvLoop](https://img.shields.io/badge/SurvLoop-0.0-orange.svg?style=flat-square)](https://github.com/wikiworldorder/survloop)
+[![SurvLoop](https://img.shields.io/badge/SurvLoop-0.0-orange.svg?style=flat-square)](https://github.com/rockhopsoft/survloop)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
 Don't Fallacy Me is a free, collaborative, multiplayer mind game! It provides an example, and you select the clearest 
 logical fallacy. A fallacy is, very generally, an error in reasoning. This differs from a factual error, which is 
 simply being wrong about the facts.  The Don't Fallacy Me database is being rebuilt using 
-<a href="https://github.com/wikiworldorder/survloop" target="_blank">SurvLoop</a>, Wiki World Order's 
+<a href="https://github.com/rockhopsoft/survloop" target="_blank">SurvLoop</a>, Wiki World Order's 
 <a href="https://laravel.com/" target="_blank">Laravel</a>-based engine for designing a 
 database and creating a mobile-friendly user interface to fill it. 
 
@@ -20,7 +20,7 @@ So if you have any skills with design or graphics that would be an amazing colla
 find sharp minds to help create an arsenal of memes, which drove tons of traffic to the site for its first few months. 
 And of course, folks can always help more by adding examples to the crowd-sourced collection.
 
-Let me know if getting more involved in this project would interest you! wikiworldorder *at* protonmail.com
+Let me know if getting more involved in this project would interest you! rockhoppers *at* runbox.com
 
 # Table of Contents
 * [Requirements](#requirements)
@@ -35,7 +35,7 @@ Let me know if getting more involved in this project would interest you! wikiwor
 
 * php: >=7.2.11
 * <a href="https://packagist.org/packages/laravel/framework" target="_blank">laravel/framework</a>: 5.7.*
-* <a href="https://packagist.org/packages/wikiworldorder/survloop" target="_blank">wikiworldorder/survloop</a>: 0.*
+* <a href="https://packagist.org/packages/rockhopsoft/survloop" target="_blank">rockhopsoft/survloop</a>: 0.*
 
 # <a name="getting-started"></a>Getting Started
 
@@ -63,7 +63,7 @@ $ nano composer.json
 ...
 "require": {
 	...
-    "wikiworldorder/fallacy": "0.*",
+    "rockhopsoft/fallacy": "0.*",
 	...
 },
 ...
@@ -71,7 +71,7 @@ $ nano composer.json
 	...
 	"psr-4": {
 		...
-		"Fallacy\\": "vendor/wikiworldorder/fallacy/src/",
+		"Fallacy\\": "vendor/rockhopsoft/fallacy/src/",
 	}
 	...
 },
@@ -99,8 +99,8 @@ $ nano config/app.php
 ...
 'aliases' => [
 	...
-	'SurvLoop'	 => 'WikiWorldOrder\SurvLoop\SurvLoopFacade',
-	'Fallacy'	 => 'WikiWorldOrder\Fallacy\FallacyFacade',
+	'SurvLoop'	 => 'RockHopSoft\SurvLoop\SurvLoopFacade',
+	'Fallacy'	 => 'RockHopSoft\Fallacy\FallacyFacade',
 	...
 ],
 ...
@@ -177,9 +177,9 @@ If you've discovered a security vulnerability in DontFallacy.Me,
 we appreciate your help in disclosing it to us in a responsible manner.
 
 Publicly disclosing a vulnerability can put the entire community at risk. 
-If you've discovered a security concern, please email us at wikiworldorder *at* protonmail.com. 
+If you've discovered a security concern, please email us at rockhoppers *at* runbox.com. 
 We'll work with you to make sure that we understand the scope of the issue, and that we fully address your concern. 
-We consider correspondence sent to wikiworldorder *at* protonmail.com our highest priority, 
+We consider correspondence sent to rockhoppers *at* runbox.com our highest priority, 
 and work to address any issues that arise as quickly as possible.
 
 After a security vulnerability has been corrected, a release will be deployed as soon as possible.

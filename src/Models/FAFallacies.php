@@ -17,6 +17,9 @@ class FAFallacies extends Model
 		'FalDesc', 
 		'FalCategoryDesc', 
 		'FalTotExamples', 
+        'ord',
+        'similars',
+        'video'
     ];
     
     // END SurvLoop auto-generated portion of Model

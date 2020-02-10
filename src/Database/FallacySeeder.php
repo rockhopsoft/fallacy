@@ -4,7 +4,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
-class FASeeder extends Seeder
+class FallacySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -21,8 +21,8 @@ class FASeeder extends Seeder
 			'DbName' => 'Fallacies',
 			'DbDesc' => 'Don\'t Fallacy Me, Bro!!',
 			'DbMission' => 'Don\'t Fallacy Me is a free, collaborative, multiplayer mind game! It provides an example, and you select the clearest logical fallacy. A fallacy is, very generally, an error in reasoning. This differs from a factual error, which is simply being wrong about the facts.',
-			'DbTables' => '13',
-			'DbFields' => '68'
+			'DbTables' => '12',
+			'DbFields' => '66'
 		]);
 	
 	DB::table('SL_Tables')->insert([
@@ -34,68 +34,6 @@ class FASeeder extends Seeder
 			'TblGroup' => 'Users',
 			'TblOrd' => '10',
 			'TblNumForeignIn' => '4'
-		]);
-		DB::table('SL_Tables')->insert([
-			'TblID' => 40,
-			'TblDatabase' => '1',
-			'TblAbbr' => 'Exa',
-			'TblName' => 'Examples',
-			'TblEng' => 'Fallacy Examples',
-			'TblDesc' => 'Each record represents one example statement featuring one or more logical fallacies.',
-			'TblGroup' => 'Fallacy Main Game',
-			'TblOrd' => '6',
-			'TblNumFields' => '13',
-			'TblNumForeignKeys' => '1',
-			'TblNumForeignIn' => '3'
-		]);
-		DB::table('SL_Tables')->insert([
-			'TblID' => 41,
-			'TblDatabase' => '1',
-			'TblAbbr' => 'ExaAns',
-			'TblName' => 'ExampleAnswers',
-			'TblEng' => 'Example Answers',
-			'TblDesc' => 'Each record links one Fallacy Category as a correct Answer to one Example.',
-			'TblType' => 'Linking',
-			'TblGroup' => 'Fallacy Main Game',
-			'TblOrd' => '7',
-			'TblNumFields' => '2',
-			'TblNumForeignKeys' => '2'
-		]);
-		DB::table('SL_Tables')->insert([
-			'TblID' => 42,
-			'TblDatabase' => '1',
-			'TblAbbr' => 'Fal',
-			'TblName' => 'Fallacies',
-			'TblEng' => 'Types of Fallacies',
-			'TblDesc' => 'Each record stores all the information about one category of Fallacy.',
-			'TblGroup' => 'Fallacy Main Game',
-			'TblOrd' => '3',
-			'TblNumFields' => '7',
-			'TblNumForeignIn' => '7'
-		]);
-		DB::table('SL_Tables')->insert([
-			'TblID' => 43,
-			'TblDatabase' => '1',
-			'TblAbbr' => 'ExaImg',
-			'TblName' => 'ExampleImages',
-			'TblEng' => 'Example Images',
-			'TblDesc' => 'Each record stores information about one image which can be pair with an Fallacy Example.',
-			'TblGroup' => 'Fallacy Main Game',
-			'TblOrd' => '9',
-			'TblNumFields' => '3',
-			'TblNumForeignIn' => '1'
-		]);
-		DB::table('SL_Tables')->insert([
-			'TblID' => 44,
-			'TblDatabase' => '1',
-			'TblAbbr' => 'ExaImgLnk',
-			'TblName' => 'ExampleImgLnks',
-			'TblEng' => 'Example Image Links',
-			'TblDesc' => 'Each record links one Image with one Fallacy Example as a match to be paired together.',
-			'TblGroup' => 'Fallacy Main Game',
-			'TblOrd' => '8',
-			'TblNumFields' => '2',
-			'TblNumForeignKeys' => '2'
 		]);
 		DB::table('SL_Tables')->insert([
 			'TblID' => 45,
@@ -182,544 +120,67 @@ class FASeeder extends Seeder
 			'TblNumFields' => '2',
 			'TblNumForeignKeys' => '2'
 		]);
+		DB::table('SL_Tables')->insert([
+			'TblID' => 55,
+			'TblDatabase' => '1',
+			'TblAbbr' => 'Exa',
+			'TblName' => 'Examples',
+			'TblEng' => 'Fallacy Examples',
+			'TblDesc' => 'Each record represents one example statement featuring one or more logical fallacies.',
+			'TblGroup' => 'Fallacy Main Game',
+			'TblOrd' => '6',
+			'TblNumFields' => '14',
+			'TblNumForeignKeys' => '1',
+			'TblNumForeignIn' => '3'
+		]);
+		DB::table('SL_Tables')->insert([
+			'TblID' => 56,
+			'TblDatabase' => '1',
+			'TblAbbr' => 'ExaAns',
+			'TblName' => 'ExampleAnswers',
+			'TblEng' => 'Example Answers',
+			'TblDesc' => 'Each record links one Fallacy Category as a correct Answer to one Example.',
+			'TblType' => 'Linking',
+			'TblGroup' => 'Fallacy Main Game',
+			'TblOrd' => '7',
+			'TblNumFields' => '2',
+			'TblNumForeignKeys' => '2'
+		]);
+		DB::table('SL_Tables')->insert([
+			'TblID' => 57,
+			'TblDatabase' => '1',
+			'TblAbbr' => 'Fal',
+			'TblName' => 'Fallacies',
+			'TblEng' => 'Types of Fallacies',
+			'TblDesc' => 'Each record stores all the information about one category of Fallacy.',
+			'TblGroup' => 'Fallacy Main Game',
+			'TblOrd' => '3',
+			'TblNumFields' => '7',
+			'TblNumForeignIn' => '7'
+		]);
+		DB::table('SL_Tables')->insert([
+			'TblID' => 59,
+			'TblDatabase' => '1',
+			'TblAbbr' => 'ExaImgLnk',
+			'TblName' => 'ExampleImgLnks',
+			'TblEng' => 'Example Image Links',
+			'TblDesc' => 'Each record links one Image with one Fallacy Example as a match to be paired together.',
+			'TblGroup' => 'Fallacy Main Game',
+			'TblOrd' => '8',
+			'TblNumFields' => '2',
+			'TblNumForeignKeys' => '1'
+		]);
 	
 	DB::table('SL_Fields')->insert([
-			'FldID' => 280,
+			'FldID' => 512,
 			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '6',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'UserID',
-			'FldEng' => 'User ID',
-			'FldDesc' => 'Indicates the unique User ID number of the User owning the data stored in this record for this Experience.',
-			'FldForeignTable' => '30',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',Foreign,',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 281,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '7',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'SubmissionProgress',
-			'FldEng' => 'Experience Node Progress',
-			'FldDesc' => 'Indicates the unique Node ID number of the last Experience Node loaded during this User\'s Experience.',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldCharSupport' => ',Numbers,',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 282,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '11',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'TreeVersion',
-			'FldEng' => 'Tree Version Number',
-			'FldDesc' => 'Stores the current version number of this User Experience, important for tracking bugs.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 283,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '10',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'VersionAB',
-			'FldEng' => 'A/B Testing Version',
-			'FldDesc' => 'Stores a complex string reflecting all A/B Testing variations in effect at the time of this User\'s Experience of this Node.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 284,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '8',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'UniqueStr',
-			'FldEng' => 'Unique String For Record',
-			'FldDesc' => 'This unique string is for cases when including the record ID number is not appropriate.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 285,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '9',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'IPaddy',
-			'FldEng' => 'IP Address',
-			'FldDesc' => 'Encrypted IP address of the current user.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 286,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '12',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'IsMobile',
-			'FldEng' => 'Using Mobile Device',
-			'FldDesc' => 'Indicates whether or not the current user is interacting via a mobile deviced.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 287,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldSpecSource' => '0',
-			'FldName' => 'Type',
-			'FldEng' => 'Example Type',
-			'FldDesc' => 'Indicates which type of Fallacy Example this row stores, important for filtering between \'official\' and crowd-sourced Examples.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldValues' => 'Def::Example Type',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '878800'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 288,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '1',
-			'FldSpecSource' => '0',
-			'FldName' => 'SourceUrl',
-			'FldEng' => 'Example Source URL',
-			'FldDesc' => 'Indicates the URL of source of the statement in this example, if it comes from a real context. Important for providing documentation when it is accessible online.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Letters,Numbers,Keyboard,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 289,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '2',
-			'FldSpecSource' => '0',
-			'FldName' => 'TotRight',
-			'FldEng' => 'Total Right Answers',
-			'FldDesc' => 'Indicates the total number of correct responses Users provided when presented with this Example.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6',
-			'FldCompareOther' => '6',
-			'FldOperateSame' => '137200',
-			'FldOperateOther' => '137200'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 290,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '3',
-			'FldSpecSource' => '0',
-			'FldName' => 'TotWrong',
-			'FldEng' => 'Total Wrong Answers',
-			'FldDesc' => 'Indicates the total number of incorrect responses Users provided when presented with this Example.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6',
-			'FldCompareOther' => '6',
-			'FldOperateSame' => '137200',
-			'FldOperateOther' => '137200'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 291,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '4',
-			'FldSpecSource' => '0',
-			'FldName' => 'DiscussLast',
-			'FldEng' => 'Last Discussion Comment',
-			'FldDesc' => 'Indicates the date and time of the last comment added to this Example\'s Discussion. Important for knowing which Discussions have the most recent activity.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'DATETIME',
-			'FldDataType' => 'DateTime',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,Keyboard,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 292,
-			'FldDatabase' => '1',
-			'FldTable' => '40',
-			'FldOrd' => '5',
-			'FldSpecSource' => '0',
-			'FldName' => 'DiscussTotal',
-			'FldEng' => 'Total Discussion Comments',
-			'FldDesc' => 'Indicates the total number of Discussion Comments added to this Example\'s Discussion. Important for knowing which Discussions have the most activity overall.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 293,
-			'FldDatabase' => '1',
-			'FldTable' => '42',
-			'FldOrd' => '1',
-			'FldSpecSource' => '0',
-			'FldName' => 'English',
-			'FldEng' => 'Fallacy\'s English Name',
-			'FldDesc' => 'Indicates the best English name for the category of logical fallacy in this record.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 294,
-			'FldDatabase' => '1',
-			'FldTable' => '42',
-			'FldOrd' => '2',
-			'FldSpecSource' => '0',
-			'FldName' => 'Latin',
-			'FldEng' => 'Fallacy\'s Latin Name',
-			'FldDesc' => 'Indicates the formal Latin name of the category of logical fallacy, if it has one.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 295,
-			'FldDatabase' => '1',
-			'FldTable' => '42',
-			'FldOrd' => '3',
-			'FldSpecSource' => '0',
-			'FldName' => 'Aka',
-			'FldEng' => 'Fallacy Also Known As',
-			'FldDesc' => 'Indicates all the other common names for this category of logical fallacy.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'TEXT',
-			'FldDataLength' => '0',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 296,
-			'FldDatabase' => '1',
-			'FldTable' => '42',
-			'FldOrd' => '4',
-			'FldSpecSource' => '0',
-			'FldName' => 'Desc',
-			'FldEng' => 'Fallacy Description',
-			'FldDesc' => 'Indicates a full written description of this category of logical fallacy.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 297,
-			'FldDatabase' => '1',
-			'FldTable' => '42',
-			'FldOrd' => '6',
-			'FldSpecSource' => '0',
-			'FldName' => 'TotExamples',
-			'FldEng' => 'Total Examples',
-			'FldDesc' => 'Indicates the total number of Statement Examples which use this category of logical Fallacy as a correct Answer.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 298,
-			'FldDatabase' => '1',
-			'FldTable' => '42',
-			'FldSpecSource' => '0',
-			'FldName' => 'CategoryType',
-			'FldEng' => 'Type of Category',
-			'FldDesc' => 'Indicates which type of fallacy category this record describes.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '878800'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 299,
-			'FldDatabase' => '1',
-			'FldTable' => '42',
-			'FldOrd' => '5',
-			'FldSpecSource' => '0',
-			'FldName' => 'CategoryDesc',
-			'FldEng' => 'Categories Description',
-			'FldDesc' => 'Indicates a full written description of the categories to which this logical fallacy belongs.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 300,
-			'FldDatabase' => '1',
-			'FldTable' => '45',
-			'FldSpecSource' => '0',
-			'FldName' => 'ParentID',
-			'FldEng' => 'Parent Fallacy ID',
-			'FldDesc' => 'Indicates the unique Fallacy ID number of the specific parent Fallacy category of which one is a subset.',
-			'FldForeignTable' => '42',
-			'FldForeignMin' => '0',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => '0',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',Foreign,',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '878800'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 301,
-			'FldDatabase' => '1',
-			'FldTable' => '45',
-			'FldOrd' => '1',
-			'FldSpecSource' => '0',
-			'FldName' => 'ChildID',
-			'FldEng' => 'Child Fallacy ID',
-			'FldDesc' => 'Indicates the unique Fallacy ID number of the specific child Fallacy category which is a subset of the parent.',
-			'FldForeignTable' => '42',
-			'FldForeignMin' => '0',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => '0',
-			'FldForeign2Max' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',Foreign,',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '878800'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 302,
-			'FldDatabase' => '1',
-			'FldTable' => '46',
-			'FldSpecSource' => '0',
-			'FldName' => 'FallacyID',
-			'FldEng' => 'Fallacy ID',
-			'FldDesc' => 'Indicates the unique Fallacy ID number of the specific Fallacy related to this Video.',
-			'FldForeignTable' => '42',
-			'FldForeignMin' => '0',
-			'FldForeignMax' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',Foreign,',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '878800'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 303,
-			'FldDatabase' => '1',
-			'FldTable' => '46',
-			'FldOrd' => '1',
-			'FldSpecSource' => '0',
-			'FldName' => 'Url',
-			'FldEng' => 'Video URL',
-			'FldDesc' => 'Indicates the URL of the video discussing the Fallacy linked in this record.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 304,
-			'FldDatabase' => '1',
-			'FldTable' => '47',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'UserID',
-			'FldEng' => 'User ID',
-			'FldDesc' => 'Indicates the unique User ID number of the User owning the data stored in this record for this Experience.',
-			'FldForeignTable' => '30',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',Foreign,',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 305,
-			'FldDatabase' => '1',
-			'FldTable' => '47',
-			'FldOrd' => '12',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'SubmissionProgress',
-			'FldEng' => 'Experience Node Progress',
-			'FldDesc' => 'Indicates the unique Node ID number of the last Experience Node loaded during this User\'s Experience.',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldCharSupport' => ',Numbers,',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 306,
-			'FldDatabase' => '1',
-			'FldTable' => '47',
-			'FldOrd' => '9',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'TreeVersion',
-			'FldEng' => 'Tree Version Number',
-			'FldDesc' => 'Stores the current version number of this User Experience, important for tracking bugs.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 307,
-			'FldDatabase' => '1',
-			'FldTable' => '47',
-			'FldOrd' => '10',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'VersionAB',
-			'FldEng' => 'A/B Testing Version',
-			'FldDesc' => 'Stores a complex string reflecting all A/B Testing variations in effect at the time of this User\'s Experience of this Node.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 308,
-			'FldDatabase' => '1',
-			'FldTable' => '47',
-			'FldOrd' => '11',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'UniqueStr',
-			'FldEng' => 'Unique String For Record',
-			'FldDesc' => 'This unique string is for cases when including the record ID number is not appropriate.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 309,
-			'FldDatabase' => '1',
-			'FldTable' => '47',
-			'FldOrd' => '7',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'IPaddy',
-			'FldEng' => 'IP Address',
-			'FldDesc' => 'Encrypted IP address of the current user.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 310,
-			'FldDatabase' => '1',
-			'FldTable' => '47',
-			'FldOrd' => '8',
-			'FldSpecType' => 'Replica',
-			'FldName' => 'IsMobile',
-			'FldEng' => 'Using Mobile Device',
-			'FldDesc' => 'Indicates whether or not the current user is interacting via a mobile deviced.',
-			'FldOpts' => '39'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 311,
-			'FldDatabase' => '1',
-			'FldTable' => '41',
-			'FldSpecSource' => '0',
-			'FldName' => 'ExampleID',
-			'FldEng' => 'Statement Example ID',
-			'FldDesc' => 'Indicates the unique Example ID number of the specific statement linked with this logical Fallacy.',
-			'FldForeignTable' => '40',
-			'FldForeignMin' => '0',
-			'FldForeignMax' => 'N',
-			'FldType' => 'INT',
-			'FldDataType' => 'Numeric',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Numbers,',
-			'FldKeyType' => ',Foreign,',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '878800'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 312,
-			'FldDatabase' => '1',
-			'FldTable' => '41',
+			'FldTable' => '56',
 			'FldOrd' => '1',
 			'FldSpecSource' => '0',
 			'FldName' => 'FallacyID',
 			'FldEng' => 'Fallacy ID',
 			'FldDesc' => 'Indicates the unique Fallacy ID number of the specific statement linked with this Example.',
-			'FldForeignTable' => '42',
+			'FldForeignTable' => '57',
 			'FldForeignMin' => '0',
 			'FldForeignMax' => 'N',
 			'FldType' => 'INT',
@@ -731,14 +192,14 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 313,
+			'FldID' => 513,
 			'FldDatabase' => '1',
-			'FldTable' => '44',
+			'FldTable' => '59',
 			'FldSpecSource' => '0',
 			'FldName' => 'ExampleID',
 			'FldEng' => 'Statement Example ID',
 			'FldDesc' => 'Indicates the unique Example ID number of the specific statement to be paired with this Example Image.',
-			'FldForeignTable' => '40',
+			'FldForeignTable' => '55',
 			'FldForeignMin' => '0',
 			'FldForeignMax' => 'N',
 			'FldType' => 'INT',
@@ -750,15 +211,15 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 314,
+			'FldID' => 514,
 			'FldDatabase' => '1',
-			'FldTable' => '44',
+			'FldTable' => '59',
 			'FldOrd' => '1',
 			'FldSpecSource' => '0',
 			'FldName' => 'ImageID',
 			'FldEng' => 'Example Image ID',
 			'FldDesc' => 'Indicates the unique Example Image ID number of the specific statement to be paired with this Example.',
-			'FldForeignTable' => '43',
+			'FldForeignTable' => '37',
 			'FldForeignMin' => '0',
 			'FldForeignMax' => 'N',
 			'FldType' => 'INT',
@@ -770,61 +231,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 315,
-			'FldDatabase' => '1',
-			'FldTable' => '43',
-			'FldSpecSource' => '0',
-			'FldName' => 'Filename',
-			'FldEng' => 'Filename',
-			'FldDesc' => 'Indicates the filename of the Image to be paired with a Statement Example.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldCharSupport' => ',Letters,Numbers,Keyboard,',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 316,
-			'FldDatabase' => '1',
-			'FldTable' => '43',
-			'FldOrd' => '1',
-			'FldSpecSource' => '0',
-			'FldName' => 'Name',
-			'FldEng' => 'Nickname',
-			'FldDesc' => 'Indicates a nickname for the Example Image which can be used to identify it in certain lists.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 317,
-			'FldDatabase' => '1',
-			'FldTable' => '43',
-			'FldOrd' => '2',
-			'FldSpecSource' => '0',
-			'FldName' => 'Copyright',
-			'FldEng' => 'Copyright',
-			'FldDesc' => 'Indicates any copyright information which should accompany the Example Image when used on the site.',
-			'FldForeignMin' => 'N',
-			'FldForeignMax' => 'N',
-			'FldForeign2Min' => 'N',
-			'FldForeign2Max' => 'N',
-			'FldDataLength' => '0',
-			'FldKeyType' => ',',
-			'FldNullSupport' => '0',
-			'FldCompareSame' => '6'
-		]);
-		DB::table('SL_Fields')->insert([
-			'FldID' => 319,
+			'FldID' => 519,
 			'FldDatabase' => '1',
 			'FldTable' => '47',
 			'FldOrd' => '2',
@@ -832,7 +239,7 @@ class FASeeder extends Seeder
 			'FldName' => 'ExampleID',
 			'FldEng' => 'Statement Example ID',
 			'FldDesc' => 'Indicates the unique Statement Example ID number of the Example delivered to the User for this Play of the game.',
-			'FldForeignTable' => '40',
+			'FldForeignTable' => '55',
 			'FldForeignMin' => '0',
 			'FldForeignMax' => 'N',
 			'FldType' => 'INT',
@@ -844,7 +251,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 320,
+			'FldID' => 520,
 			'FldDatabase' => '1',
 			'FldTable' => '50',
 			'FldSpecSource' => '0',
@@ -863,7 +270,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 321,
+			'FldID' => 521,
 			'FldDatabase' => '1',
 			'FldTable' => '47',
 			'FldOrd' => '3',
@@ -884,7 +291,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 322,
+			'FldID' => 522,
 			'FldDatabase' => '1',
 			'FldTable' => '47',
 			'FldOrd' => '4',
@@ -905,14 +312,14 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 323,
+			'FldID' => 523,
 			'FldDatabase' => '1',
 			'FldTable' => '50',
 			'FldSpecSource' => '0',
 			'FldName' => 'FallacyID',
 			'FldEng' => 'Fallacy ID',
 			'FldDesc' => 'Indicates the unique Fallacy ID number of the specific type of Fallacy being chosen in response.',
-			'FldForeignTable' => '42',
+			'FldForeignTable' => '57',
 			'FldForeignMin' => '0',
 			'FldForeignMax' => 'N',
 			'FldType' => 'INT',
@@ -924,7 +331,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 324,
+			'FldID' => 524,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldSpecSource' => '0',
@@ -944,7 +351,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 325,
+			'FldID' => 525,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldOrd' => '1',
@@ -965,7 +372,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 326,
+			'FldID' => 526,
 			'FldDatabase' => '1',
 			'FldTable' => '47',
 			'FldOrd' => '1',
@@ -985,7 +392,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 327,
+			'FldID' => 527,
 			'FldDatabase' => '1',
 			'FldTable' => '47',
 			'FldOrd' => '5',
@@ -1006,7 +413,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 328,
+			'FldID' => 528,
 			'FldDatabase' => '1',
 			'FldTable' => '47',
 			'FldOrd' => '6',
@@ -1028,7 +435,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 329,
+			'FldID' => 529,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldSpecSource' => '0',
@@ -1045,7 +452,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 330,
+			'FldID' => 530,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '1',
@@ -1067,7 +474,7 @@ class FASeeder extends Seeder
 			'FldCompareOther' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 331,
+			'FldID' => 531,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '2',
@@ -1088,7 +495,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 332,
+			'FldID' => 532,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '3',
@@ -1109,7 +516,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 333,
+			'FldID' => 533,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '4',
@@ -1130,7 +537,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 334,
+			'FldID' => 534,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '5',
@@ -1151,7 +558,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 335,
+			'FldID' => 535,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '6',
@@ -1172,7 +579,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 336,
+			'FldID' => 536,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '7',
@@ -1193,7 +600,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 337,
+			'FldID' => 537,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '8',
@@ -1214,7 +621,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 338,
+			'FldID' => 538,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '9',
@@ -1235,7 +642,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 339,
+			'FldID' => 539,
 			'FldDatabase' => '1',
 			'FldTable' => '53',
 			'FldOrd' => '10',
@@ -1256,7 +663,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '6'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 340,
+			'FldID' => 540,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldOrd' => '2',
@@ -1278,7 +685,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 341,
+			'FldID' => 541,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldSpecType' => 'Replica',
@@ -1291,7 +698,7 @@ class FASeeder extends Seeder
 			'FldOpts' => '39'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 342,
+			'FldID' => 542,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldSpecType' => 'Replica',
@@ -1301,7 +708,7 @@ class FASeeder extends Seeder
 			'FldOpts' => '39'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 343,
+			'FldID' => 543,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldSpecType' => 'Replica',
@@ -1311,7 +718,7 @@ class FASeeder extends Seeder
 			'FldOpts' => '39'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 344,
+			'FldID' => 544,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldSpecType' => 'Replica',
@@ -1321,7 +728,7 @@ class FASeeder extends Seeder
 			'FldOpts' => '39'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 345,
+			'FldID' => 545,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldSpecType' => 'Replica',
@@ -1331,7 +738,7 @@ class FASeeder extends Seeder
 			'FldOpts' => '39'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 346,
+			'FldID' => 546,
 			'FldDatabase' => '1',
 			'FldTable' => '52',
 			'FldSpecType' => 'Replica',
@@ -1341,14 +748,14 @@ class FASeeder extends Seeder
 			'FldOpts' => '39'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 347,
+			'FldID' => 547,
 			'FldDatabase' => '1',
 			'FldTable' => '54',
 			'FldSpecSource' => '0',
 			'FldName' => 'FallacyID1',
 			'FldEng' => 'Fallacy #1 ID',
 			'FldDesc' => 'Indicates the first unique Fallacy ID number which is similar.',
-			'FldForeignTable' => '42',
+			'FldForeignTable' => '57',
 			'FldForeignMin' => '0',
 			'FldForeignMax' => 'N',
 			'FldType' => 'INT',
@@ -1360,7 +767,7 @@ class FASeeder extends Seeder
 			'FldCompareSame' => '878800'
 		]);
 		DB::table('SL_Fields')->insert([
-			'FldID' => 348,
+			'FldID' => 548,
 			'FldDatabase' => '1',
 			'FldTable' => '54',
 			'FldOrd' => '1',
@@ -1368,7 +775,7 @@ class FASeeder extends Seeder
 			'FldName' => 'FallacyID2',
 			'FldEng' => 'Fallacy #2 ID',
 			'FldDesc' => 'Indicates the second unique Fallacy ID number which is similar.',
-			'FldForeignTable' => '42',
+			'FldForeignTable' => '57',
 			'FldForeignMin' => '0',
 			'FldForeignMax' => 'N',
 			'FldType' => 'INT',
@@ -1379,13 +786,561 @@ class FASeeder extends Seeder
 			'FldNullSupport' => '0',
 			'FldCompareSame' => '878800'
 		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 480,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '7',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'UserID',
+			'FldEng' => 'User ID',
+			'FldDesc' => 'Indicates the unique User ID number of the User owning the data stored in this record for this Experience.',
+			'FldForeignTable' => '30',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',Foreign,',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 481,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '8',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'SubmissionProgress',
+			'FldEng' => 'Experience Node Progress',
+			'FldDesc' => 'Indicates the unique Node ID number of the last Experience Node loaded during this User\'s Experience.',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldCharSupport' => ',Numbers,',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 482,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '12',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'TreeVersion',
+			'FldEng' => 'Tree Version Number',
+			'FldDesc' => 'Stores the current version number of this User Experience, important for tracking bugs.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 483,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '11',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'VersionAB',
+			'FldEng' => 'A/B Testing Version',
+			'FldDesc' => 'Stores a complex string reflecting all A/B Testing variations in effect at the time of this User\'s Experience of this Node.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 484,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '9',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'UniqueStr',
+			'FldEng' => 'Unique String For Record',
+			'FldDesc' => 'This unique string is for cases when including the record ID number is not appropriate.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 485,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '10',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'IPaddy',
+			'FldEng' => 'IP Address',
+			'FldDesc' => 'Encrypted IP address of the current user.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 486,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '13',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'IsMobile',
+			'FldEng' => 'Using Mobile Device',
+			'FldDesc' => 'Indicates whether or not the current user is interacting via a mobile deviced.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 487,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldSpecSource' => '0',
+			'FldName' => 'Type',
+			'FldEng' => 'Example Type',
+			'FldDesc' => 'Indicates which type of Fallacy Example this row stores, important for filtering between \'official\' and crowd-sourced Examples.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldValues' => 'Def::Example Type',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '878800'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 488,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '2',
+			'FldSpecSource' => '0',
+			'FldName' => 'SourceUrl',
+			'FldEng' => 'Example Source URL',
+			'FldDesc' => 'Indicates the URL of source of the statement in this example, if it comes from a real context. Important for providing documentation when it is accessible online.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'TEXT',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Letters,Numbers,Keyboard,',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 489,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '3',
+			'FldSpecSource' => '0',
+			'FldName' => 'TotRight',
+			'FldEng' => 'Total Right Answers',
+			'FldDesc' => 'Indicates the total number of correct responses Users provided when presented with this Example.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6',
+			'FldCompareOther' => '6',
+			'FldOperateSame' => '137200',
+			'FldOperateOther' => '137200'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 490,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '4',
+			'FldSpecSource' => '0',
+			'FldName' => 'TotWrong',
+			'FldEng' => 'Total Wrong Answers',
+			'FldDesc' => 'Indicates the total number of incorrect responses Users provided when presented with this Example.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6',
+			'FldCompareOther' => '6',
+			'FldOperateSame' => '137200',
+			'FldOperateOther' => '137200'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 491,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '5',
+			'FldSpecSource' => '0',
+			'FldName' => 'DiscussLast',
+			'FldEng' => 'Last Discussion Comment',
+			'FldDesc' => 'Indicates the date and time of the last comment added to this Example\'s Discussion. Important for knowing which Discussions have the most recent activity.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'DATETIME',
+			'FldDataType' => 'DateTime',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,Keyboard,',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 492,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '6',
+			'FldSpecSource' => '0',
+			'FldName' => 'DiscussTotal',
+			'FldEng' => 'Total Discussion Comments',
+			'FldDesc' => 'Indicates the total number of Discussion Comments added to this Example\'s Discussion. Important for knowing which Discussions have the most activity overall.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 493,
+			'FldDatabase' => '1',
+			'FldTable' => '57',
+			'FldOrd' => '1',
+			'FldSpecSource' => '0',
+			'FldName' => 'English',
+			'FldEng' => 'Fallacy\'s English Name',
+			'FldDesc' => 'Indicates the best English name for the category of logical fallacy in this record.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldDataLength' => '0',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 494,
+			'FldDatabase' => '1',
+			'FldTable' => '57',
+			'FldOrd' => '2',
+			'FldSpecSource' => '0',
+			'FldName' => 'Latin',
+			'FldEng' => 'Fallacy\'s Latin Name',
+			'FldDesc' => 'Indicates the formal Latin name of the category of logical fallacy, if it has one.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldDataLength' => '0',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 495,
+			'FldDatabase' => '1',
+			'FldTable' => '57',
+			'FldOrd' => '3',
+			'FldSpecSource' => '0',
+			'FldName' => 'Aka',
+			'FldEng' => 'Fallacy Also Known As',
+			'FldDesc' => 'Indicates all the other common names for this category of logical fallacy.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'TEXT',
+			'FldDataLength' => '0',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 496,
+			'FldDatabase' => '1',
+			'FldTable' => '57',
+			'FldOrd' => '4',
+			'FldSpecSource' => '0',
+			'FldName' => 'Desc',
+			'FldEng' => 'Fallacy Description',
+			'FldDesc' => 'Indicates a full written description of this category of logical fallacy.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldDataLength' => '0',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 497,
+			'FldDatabase' => '1',
+			'FldTable' => '57',
+			'FldOrd' => '6',
+			'FldSpecSource' => '0',
+			'FldName' => 'TotExamples',
+			'FldEng' => 'Total Examples',
+			'FldDesc' => 'Indicates the total number of Statement Examples which use this category of logical Fallacy as a correct Answer.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 498,
+			'FldDatabase' => '1',
+			'FldTable' => '57',
+			'FldSpecSource' => '0',
+			'FldName' => 'CategoryType',
+			'FldEng' => 'Type of Category',
+			'FldDesc' => 'Indicates which type of fallacy category this record describes.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldValues' => 'Def::Types of Fallacy Categories',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '878800'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 499,
+			'FldDatabase' => '1',
+			'FldTable' => '57',
+			'FldOrd' => '5',
+			'FldSpecSource' => '0',
+			'FldName' => 'CategoryDesc',
+			'FldEng' => 'Categories Description',
+			'FldDesc' => 'Indicates a full written description of the categories to which this logical fallacy belongs.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldDataLength' => '0',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 500,
+			'FldDatabase' => '1',
+			'FldTable' => '45',
+			'FldSpecSource' => '0',
+			'FldName' => 'ParentID',
+			'FldEng' => 'Parent Fallacy ID',
+			'FldDesc' => 'Indicates the unique Fallacy ID number of the specific parent Fallacy category of which one is a subset.',
+			'FldForeignTable' => '57',
+			'FldForeignMin' => '0',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => '0',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',Foreign,',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '878800'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 501,
+			'FldDatabase' => '1',
+			'FldTable' => '45',
+			'FldOrd' => '1',
+			'FldSpecSource' => '0',
+			'FldName' => 'ChildID',
+			'FldEng' => 'Child Fallacy ID',
+			'FldDesc' => 'Indicates the unique Fallacy ID number of the specific child Fallacy category which is a subset of the parent.',
+			'FldForeignTable' => '57',
+			'FldForeignMin' => '0',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => '0',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',Foreign,',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '878800'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 502,
+			'FldDatabase' => '1',
+			'FldTable' => '46',
+			'FldSpecSource' => '0',
+			'FldName' => 'FallacyID',
+			'FldEng' => 'Fallacy ID',
+			'FldDesc' => 'Indicates the unique Fallacy ID number of the specific Fallacy related to this Video.',
+			'FldForeignTable' => '57',
+			'FldForeignMin' => '0',
+			'FldForeignMax' => 'N',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',Foreign,',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '878800'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 503,
+			'FldDatabase' => '1',
+			'FldTable' => '46',
+			'FldOrd' => '1',
+			'FldSpecSource' => '0',
+			'FldName' => 'Url',
+			'FldEng' => 'Video URL',
+			'FldDesc' => 'Indicates the URL of the video discussing the Fallacy linked in this record.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldDataLength' => '0',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 504,
+			'FldDatabase' => '1',
+			'FldTable' => '47',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'UserID',
+			'FldEng' => 'User ID',
+			'FldDesc' => 'Indicates the unique User ID number of the User owning the data stored in this record for this Experience.',
+			'FldForeignTable' => '30',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',Foreign,',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 505,
+			'FldDatabase' => '1',
+			'FldTable' => '47',
+			'FldOrd' => '12',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'SubmissionProgress',
+			'FldEng' => 'Experience Node Progress',
+			'FldDesc' => 'Indicates the unique Node ID number of the last Experience Node loaded during this User\'s Experience.',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldCharSupport' => ',Numbers,',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 506,
+			'FldDatabase' => '1',
+			'FldTable' => '47',
+			'FldOrd' => '9',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'TreeVersion',
+			'FldEng' => 'Tree Version Number',
+			'FldDesc' => 'Stores the current version number of this User Experience, important for tracking bugs.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 507,
+			'FldDatabase' => '1',
+			'FldTable' => '47',
+			'FldOrd' => '10',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'VersionAB',
+			'FldEng' => 'A/B Testing Version',
+			'FldDesc' => 'Stores a complex string reflecting all A/B Testing variations in effect at the time of this User\'s Experience of this Node.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 508,
+			'FldDatabase' => '1',
+			'FldTable' => '47',
+			'FldOrd' => '11',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'UniqueStr',
+			'FldEng' => 'Unique String For Record',
+			'FldDesc' => 'This unique string is for cases when including the record ID number is not appropriate.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 509,
+			'FldDatabase' => '1',
+			'FldTable' => '47',
+			'FldOrd' => '7',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'IPaddy',
+			'FldEng' => 'IP Address',
+			'FldDesc' => 'Encrypted IP address of the current user.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 510,
+			'FldDatabase' => '1',
+			'FldTable' => '47',
+			'FldOrd' => '8',
+			'FldSpecType' => 'Replica',
+			'FldName' => 'IsMobile',
+			'FldEng' => 'Using Mobile Device',
+			'FldDesc' => 'Indicates whether or not the current user is interacting via a mobile deviced.',
+			'FldOpts' => '39'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 511,
+			'FldDatabase' => '1',
+			'FldTable' => '56',
+			'FldSpecSource' => '0',
+			'FldName' => 'ExampleID',
+			'FldEng' => 'Statement Example ID',
+			'FldDesc' => 'Indicates the unique Example ID number of the specific statement linked with this logical Fallacy.',
+			'FldForeignTable' => '55',
+			'FldForeignMin' => '0',
+			'FldForeignMax' => 'N',
+			'FldType' => 'INT',
+			'FldDataType' => 'Numeric',
+			'FldDataLength' => '0',
+			'FldCharSupport' => ',Numbers,',
+			'FldKeyType' => ',Foreign,',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '878800'
+		]);
+		DB::table('SL_Fields')->insert([
+			'FldID' => 10308,
+			'FldDatabase' => '1',
+			'FldTable' => '55',
+			'FldOrd' => '1',
+			'FldSpecSource' => '0',
+			'FldName' => 'Statement',
+			'FldEng' => 'Example Statement or Argument',
+			'FldDesc' => 'Indicates the actual statement or argument which exemplifies one or more logical fallacy.',
+			'FldForeignMin' => 'N',
+			'FldForeignMax' => 'N',
+			'FldForeign2Min' => 'N',
+			'FldForeign2Max' => 'N',
+			'FldType' => 'TEXT',
+			'FldDataLength' => '0',
+			'FldKeyType' => ',',
+			'FldNullSupport' => '0',
+			'FldCompareSame' => '6'
+		]);
 	
 	DB::table('SL_Definitions')->insert([
 			'DefID' => 1,
 			'DefDatabase' => '1',
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'app-url',
-			'DefDescription' => 'http://fallacy.homestead.test'
+			'DefDescription' => 'http://fallacy.local'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 2,
@@ -1553,7 +1508,7 @@ class FASeeder extends Seeder
 			'DefDatabase' => '1',
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'site-name',
-			'DefDescription' => 'Fallacies'
+			'DefDescription' => 'Don\'t Fallacy Me Bro'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 26,
@@ -1567,14 +1522,14 @@ class FASeeder extends Seeder
 			'DefDatabase' => '1',
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'cust-package',
-			'DefDescription' => 'wikiworldorder/fallacy'
+			'DefDescription' => 'rockhopsoft/fallacy'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 28,
 			'DefDatabase' => '1',
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'logo-url',
-			'DefDescription' => 'http://fallacy.homestead.test'
+			'DefDescription' => 'http://fallacy.local'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 29,
@@ -1623,14 +1578,14 @@ class FASeeder extends Seeder
 			'DefDatabase' => '1',
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'logo-img-sm',
-			'DefDescription' => '/fallacy/uploadslogo-dont-fallacy-me-sm.png'
+			'DefDescription' => '/fallacy/uploads/logo-dont-fallacy-me-sm.png'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 36,
 			'DefDatabase' => '1',
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'shortcut-icon',
-			'DefDescription' => '/fallacy/uploads/favicon.png'
+			'DefDescription' => '/fallacy/uploads/favicon3.png'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 37,
@@ -1638,36 +1593,6 @@ class FASeeder extends Seeder
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'spinner-code',
 			'DefDescription' => '<i class="fa-li fa fa-spinner fa-spin"></i>'
-		]);
-		DB::table('SL_Definitions')->insert([
-			'DefID' => 38,
-			'DefDatabase' => '1',
-			'DefSet' => 'System Settings',
-			'DefSubset' => 'google-analytic'
-		]);
-		DB::table('SL_Definitions')->insert([
-			'DefID' => 39,
-			'DefDatabase' => '1',
-			'DefSet' => 'System Settings',
-			'DefSubset' => 'google-map-key'
-		]);
-		DB::table('SL_Definitions')->insert([
-			'DefID' => 40,
-			'DefDatabase' => '1',
-			'DefSet' => 'System Settings',
-			'DefSubset' => 'google-map-key2'
-		]);
-		DB::table('SL_Definitions')->insert([
-			'DefID' => 41,
-			'DefDatabase' => '1',
-			'DefSet' => 'System Settings',
-			'DefSubset' => 'google-cod-key'
-		]);
-		DB::table('SL_Definitions')->insert([
-			'DefID' => 42,
-			'DefDatabase' => '1',
-			'DefSet' => 'System Settings',
-			'DefSubset' => 'google-cod-key2'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 43,
@@ -1681,7 +1606,7 @@ class FASeeder extends Seeder
 			'DefDatabase' => '1',
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'show-logo-title',
-			'DefDescription' => '1'
+			'DefDescription' => '0'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 45,
@@ -1702,7 +1627,7 @@ class FASeeder extends Seeder
 			'DefDatabase' => '1',
 			'DefSet' => 'System Settings',
 			'DefSubset' => 'has-volunteers',
-			'DefDescription' => '1'
+			'DefDescription' => '0'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 48,
@@ -1823,16 +1748,7 @@ class FASeeder extends Seeder
 			'DefSet' => 'Style CSS',
 			'DefSubset' => 'main',
 			'DefDescription' => '#mainNav { border-bottom: 1px #622AD5 solid; }
-#navBurger { border: 1px #622AD5 solid; }
-a.btn.btn-secondary:link, a.btn.btn-secondary:visited, a.btn.btn-secondary:active,
-a.btn.btn-sm.btn-secondary:link, a.btn.btn-sm.btn-secondary:visited, a.btn.btn-sm.btn-secondary:active,
-a.btn.btn-lg.btn-secondary:link, a.btn.btn-lg.btn-secondary:visited, a.btn.btn-lg.btn-secondary:active,
-a.btn.btn-xl.btn-secondary:link, a.btn.btn-xl.btn-secondary:visited, a.btn.btn-xl.btn-secondary:active {
-color: #FFF;
-}
-a.btn.btn-secondary:hover, a.btn.btn-sm.btn-secondary:hover, a.btn.btn-lg.btn-secondary:hover, a.btn.btn-xl.btn-secondary:hover {
-color: #EEE;
-}'
+#navBurger { border: 1px #622AD5 solid; }'
 		]);
 		DB::table('SL_Definitions')->insert([
 			'DefID' => 64,
@@ -1905,6 +1821,41 @@ color: #EEE;
 			'DefSubset' => 'Game Difficulty',
 			'DefOrder' => '2',
 			'DefValue' => 'Crowd-Sourced Set with More Than 1 Fallacy Marked Correct'
+		]);
+		DB::table('SL_Definitions')->insert([
+			'DefID' => 78,
+			'DefDatabase' => '1',
+			'DefSet' => 'System Settings',
+			'DefSubset' => 'user-name-req',
+			'DefDescription' => '1 or 0'
+		]);
+		DB::table('SL_Definitions')->insert([
+			'DefID' => 79,
+			'DefDatabase' => '1',
+			'DefSet' => 'System Settings',
+			'DefSubset' => 'has-avatars',
+			'DefDescription' => '/fallacy/uploads/brain-toroid-anim-sm.gif'
+		]);
+		DB::table('SL_Definitions')->insert([
+			'DefID' => 80,
+			'DefDatabase' => '1',
+			'DefSet' => 'System Settings',
+			'DefSubset' => 'app-license-snc',
+			'DefDescription' => '2019'
+		]);
+		DB::table('SL_Definitions')->insert([
+			'DefID' => 81,
+			'DefDatabase' => '1',
+			'DefSet' => 'System Settings',
+			'DefSubset' => 'sys-cust-js',
+			'DefDescription' => 'var custom = 1;'
+		]);
+		DB::table('SL_Definitions')->insert([
+			'DefID' => 82,
+			'DefDatabase' => '1',
+			'DefSet' => 'System Settings',
+			'DefSubset' => 'sys-cust-ajax',
+			'DefDescription' => 'function reqFormFldCustom() { return 0; }'
 		]);
 	
 
@@ -2038,6 +1989,70 @@ color: #EEE;
 			'TreeType' => 'Survey XML',
 			'TreeName' => 'Don\'t Fallacy Me Game Session',
 			'TreeSlug' => 'game-session'
+		]);
+		DB::table('SL_Tree')->insert([
+			'TreeID' => 19,
+			'TreeDatabase' => '1',
+			'TreeUser' => '0',
+			'TreeType' => 'Page',
+			'TreeName' => 'Staff Search',
+			'TreeSlug' => 'staff-search',
+			'TreeRoot' => '55',
+			'TreeOpts' => '1333'
+		]);
+		DB::table('SL_Tree')->insert([
+			'TreeID' => 20,
+			'TreeDatabase' => '1',
+			'TreeUser' => '0',
+			'TreeType' => 'Page',
+			'TreeName' => 'Partner Search',
+			'TreeSlug' => 'partner-search',
+			'TreeRoot' => '57',
+			'TreeOpts' => '1271'
+		]);
+		DB::table('SL_Tree')->insert([
+			'TreeID' => 21,
+			'TreeDatabase' => '1',
+			'TreeUser' => '1',
+			'TreeType' => 'Survey',
+			'TreeName' => 'Add Fallacy Example',
+			'TreeSlug' => 'add-fallacy-example',
+			'TreeRoot' => '59',
+			'TreeFirstPage' => '60',
+			'TreeLastPage' => '61',
+			'TreeCoreTable' => '55',
+			'TreeOpts' => '22'
+		]);
+		DB::table('SL_Tree')->insert([
+			'TreeID' => 22,
+			'TreeDatabase' => '1',
+			'TreeUser' => '1',
+			'TreeType' => 'Survey XML',
+			'TreeName' => 'Add Fallacy Example',
+			'TreeSlug' => 'add-fallacy-example'
+		]);
+		DB::table('SL_Tree')->insert([
+			'TreeID' => 23,
+			'TreeDatabase' => '1',
+			'TreeUser' => '1',
+			'TreeType' => 'Page',
+			'TreeName' => 'Fallacy Example #[[coreID]]',
+			'TreeSlug' => 'fallacy-example',
+			'TreeRoot' => '65',
+			'TreeFirstPage' => '65',
+			'TreeLastPage' => '65',
+			'TreeOpts' => '13'
+		]);
+		DB::table('SL_Tree')->insert([
+			'TreeID' => 24,
+			'TreeDatabase' => '1',
+			'TreeUser' => '1',
+			'TreeType' => 'Page',
+			'TreeName' => 'List of Different Fallacies',
+			'TreeSlug' => 'list-of-different-fallacies',
+			'TreeRoot' => '71',
+			'TreeFirstPage' => '71',
+			'TreeLastPage' => '71'
 		]);
 	
 	DB::table('SL_Node')->insert([
@@ -2290,6 +2305,147 @@ color: #EEE;
 			'NodePromptNotes' => 'manage-session',
 			'NodePromptAfter' => 'Manage Game Session::M::::M::::M::'
 		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 55,
+			'NodeTree' => '19',
+			'NodeType' => 'Page',
+			'NodePromptNotes' => 'staff-search'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 56,
+			'NodeTree' => '19',
+			'NodeParentID' => '55',
+			'NodeType' => 'Instructions',
+			'NodePromptText' => '<center><h1 style="margin-top: 50px;">Coming Soon</h1></center>'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 57,
+			'NodeTree' => '20',
+			'NodeType' => 'Page',
+			'NodePromptNotes' => 'partner-search'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 58,
+			'NodeTree' => '20',
+			'NodeParentID' => '57',
+			'NodeType' => 'Instructions',
+			'NodePromptText' => '<center><h1 style="margin-top: 50px;">Coming Soon</h1></center>'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 59,
+			'NodeTree' => '21',
+			'NodeType' => 'Data Manip: New',
+			'NodeDataBranch' => 'Examples'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 60,
+			'NodeTree' => '21',
+			'NodeParentID' => '59',
+			'NodeType' => 'Page',
+			'NodePromptNotes' => 'edit-fallacy-example',
+			'NodePromptAfter' => 'Edit Fallacy Example::M::::M::::M::'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 61,
+			'NodeTree' => '21',
+			'NodeParentID' => '59',
+			'NodeParentOrder' => '1',
+			'NodeType' => 'Page',
+			'NodePromptNotes' => 'redirect',
+			'NodePromptAfter' => 'Redirect::M::::M::::M::'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 62,
+			'NodeTree' => '21',
+			'NodeParentID' => '60',
+			'NodeParentOrder' => '1',
+			'NodeType' => 'Instructions',
+			'NodePromptText' => '<h3>To edit fallacy examples on the site, you must be logged in. Please <a href="/login">login</a> or <a href="/register">sign up</a>.</h3>'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 63,
+			'NodeTree' => '21',
+			'NodeParentID' => '60',
+			'NodeType' => 'Page Block'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 64,
+			'NodeTree' => '21',
+			'NodeParentID' => '63',
+			'NodeType' => 'Instructions Raw',
+			'NodePromptText' => '<h2 class="slBlueDark">Add An Example To The Crowd-Sourced Collection</h2>
+<p><a href="#">Click here to see your sub-set of fallacious statements.</a></p>'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 65,
+			'NodeTree' => '23',
+			'NodeType' => 'Page',
+			'NodePromptNotes' => 'fallacy-example',
+			'NodePromptAfter' => 'Fallacy Example #[[coreID]]::M::::M::::M::',
+			'NodeResponseSet' => '21',
+			'NodeCharLimit' => '-1'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 66,
+			'NodeTree' => '23',
+			'NodeParentID' => '65',
+			'NodeType' => 'Instructions',
+			'NodePromptText' => '<h2>Welcome to Fallacy Example #[[coreID]].</h2>
+<p>Edit this node to fill in your page! This node could be your entire page, or just one little component.</p>'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 67,
+			'NodeTree' => '21',
+			'NodeParentID' => '63',
+			'NodeParentOrder' => '1',
+			'NodeType' => 'Long Text',
+			'NodePromptText' => 'Add an example of a fallacious statement or argument:',
+			'NodeDataStore' => 'Examples:ExaStatement',
+			'NodeOpts' => '5'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 68,
+			'NodeTree' => '21',
+			'NodeParentID' => '63',
+			'NodeParentOrder' => '3',
+			'NodeType' => 'Checkbox',
+			'NodePromptText' => 'Which logical fallacy, or few main fallacies is this an example of?',
+			'NodeResponseSet' => 'Table::Fallacies',
+			'NodeDataStore' => 'ExampleAnswers:ExaAnsFallacyID',
+			'NodeOpts' => '5'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 69,
+			'NodeTree' => '21',
+			'NodeParentID' => '63',
+			'NodeParentOrder' => '2',
+			'NodeType' => 'Text',
+			'NodePromptText' => 'If the statement is a real-life example, please provide the source URL here:',
+			'NodeDataStore' => 'Examples:ExaSourceUrl'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 70,
+			'NodeTree' => '21',
+			'NodeParentID' => '61',
+			'NodeType' => 'Instructions Raw',
+			'NodePromptText' => 'Redirecting...'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 71,
+			'NodeTree' => '24',
+			'NodeType' => 'Page',
+			'NodePromptNotes' => 'list-of-different-fallacies',
+			'NodePromptAfter' => 'List of Different Fallacies::M::::M::::M::',
+			'NodeCharLimit' => '-1'
+		]);
+		DB::table('SL_Node')->insert([
+			'NodeID' => 72,
+			'NodeTree' => '24',
+			'NodeParentID' => '71',
+			'NodeType' => 'Instructions',
+			'NodePromptText' => '<h2>Welcome to List of Different Fallacies.</h2>
+<p>Edit this node to fill in your page! This node could be your entire page, or just one little component.</p>'
+		]);
 	
 
 	DB::table('SL_Conditions')->insert([
@@ -2374,6 +2530,13 @@ color: #EEE;
 			'DataSubTblLnk' => 'PlaExampleID',
 			'DataSubSubTbl' => 'Examples'
 		]);
+		DB::table('SL_DataSubsets')->insert([
+			'DataSubID' => 8,
+			'DataSubTree' => '21',
+			'DataSubTbl' => 'ExampleAnswers',
+			'DataSubTblLnk' => 'ExaAnsFallacyID',
+			'DataSubSubTbl' => 'Fallacies'
+		]);
 	
 	DB::table('SL_DataHelpers')->insert([
 			'DataHelpID' => 1,
@@ -2427,8 +2590,14 @@ color: #EEE;
 			'DataHelpTable' => 'ExampleAnswers',
 			'DataHelpKeyField' => 'ExaAnsExampleID'
 		]);
+		DB::table('SL_DataHelpers')->insert([
+			'DataHelpID' => 9,
+			'DataHelpTree' => '21',
+			'DataHelpParentTable' => 'Examples',
+			'DataHelpTable' => 'ExampleAnswers',
+			'DataHelpKeyField' => 'ExaAnsExampleID',
+			'DataHelpValueField' => 'ExaAnsFallacyID'
+		]);
 	
-
-
 
  } } 

@@ -1,5 +1,5 @@
 {
-    "name": "wikiworldorder/fallacy",
+    "name": "rockhopsoft/fallacy",
     "description": "Don't Fallacy Me is a free, collaborative, multiplayer mind game! It provides an example, and you select the clearest logical fallacy.",
     "keywords": [
     	"laravel", 
@@ -17,13 +17,13 @@
     "authors": [
         {
             "name": "Morgan Lesko",
-            "homepage": "https://github.com/wikiworldorder/fallacy",
-            "email": "wikiworldorder@protonmail.com",
+            "homepage": "https://github.com/rockhopsoft/fallacy",
+            "email": "rockhoppers@runbox.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "wikiworldorder/survloop": "*@dev"
+        "rockhopsoft/survloop": "*@dev"
     },
     "autoload": {
         "psr-4": {

@@ -1,49 +1,23 @@
 <?php
 namespace Fallacy\Controllers;
 
-use DB;
-use Auth;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Fallacy\Controllers\FallacyGame;
 
-use App\Models\User;
-
-use Fallacy\Controllers\FallacyReport;
-use SurvLoop\Controllers\TreeSurvForm;
-
-class Fallacy extends TreeSurvForm
+class Fallacy extends FallacyGame
 {
     
-    public $classExtension = 'Fallacy';
-    public $treeID         = 1;
-    
-    // Initializing a bunch of things which are not [yet] automatically determined by the software
-    protected function initExtra(Request $request)
+    protected function customNodePrint($nID = -3, $tmpSubTier = [], $nIDtxt = '', $nSffx = '', $currVisib = 1)
     {
-        // Establishing Main Navigation Organization, with Node ID# and Section Titles
-        $this->majorSections = [];
-        return true;
-    }
-        
-    // Initializing a bunch of things which are not [yet] automatically determined by the software
-    protected function loadExtra()
-    {
-        return true;
-    }
-    
-    protected function isPublic()
-    {
-        return false;
-    }
-    
-    public function isPublished($coreTbl, $coreID, $coreRec = NULL)
-    {
-        return false;
-    }
-    
-    protected function recordIsEditable($coreTbl, $coreID, $coreRec = NULL)
-    {
-        return $this->v["isAdmin"];
+        $ret = '';
+        if ($nID == 72) {
+            $ret .= $this->printFallacyList($nID);
+        } elseif ($nID == 75) {
+            $ret .= $this->printFallacyListGeneralIntro($nID);
+        } elseif ($nID == 68) {
+            $ret .= $this->printEditExampleFallacyResponses($nID);
+        }
+        return $ret;
     }
     
     /*
@@ -58,18 +32,11 @@ class Fallacy extends TreeSurvForm
     }
     */
     
-    protected function customNodePrint($nID = -3, $tmpSubTier = [], $nIDtxt = '', $nSffx = '', $currVisib = 1)
-    {
-        $ret = '';
-        if ($nID == 1) {
-            
-        }
-        return $ret;
-    }
-    
     public function printPreviewReportCustom($isAdmin = false)
     {
-        if (!isset($this->sessData->dataSets[$GLOBALS["SL"]->coreTbl])) return '';
+        if (!isset($this->sessData->dataSets[$GLOBALS["SL"]->coreTbl])) {
+            return '';
+        }
         
         
         return '';

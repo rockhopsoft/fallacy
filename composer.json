@@ -23,7 +23,8 @@
         }
     ],
     "require": {
-        "rockhopsoft/survloop": "*@dev"
+        "rockhopsoft/survloop": "*@dev",
+        "rockhopsoft/fallacy-memes": "*@dev"
     },
     "autoload": {
         "psr-4": {

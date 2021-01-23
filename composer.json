@@ -1,10 +1,10 @@
 {
     "name": "rockhopsoft/fallacy",
-    "description": "This is a free, collaborative, multiplayer logical fallacy mind game! It provides an example, and you select the clearest logical fallacy.",
+    "description": "Don't Fallacy Me is a free, collaborative, multiplayer mind game! It provides an example, and you select the clearest logical fallacy.",
     "keywords": [
     	"laravel", 
     	"Survloop", 
-    	"Don't Fallacy Me Bro",
+    	"Fallacy Me Bro",
     	"logical fallacy", 
     	"games", 
     	"multiplayer", 

@@ -14,6 +14,6 @@ class FAFallacySimilar extends Model
 		'FalSimFallacyID2', 
     ];
     
-    // END SurvLoop auto-generated portion of Model
+    // END Survloop auto-generated portion of Model
     
 }

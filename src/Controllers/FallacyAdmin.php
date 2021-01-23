@@ -9,7 +9,7 @@ use App\Models\User;
 use App\Models\SLDefinitions;
 
 use Fallacy\Controllers\FallacyReport;
-use SurvLoop\Controllers\AdminSubsController;
+use RockHopSoft\Survloop\Controllers\AdminSubsController;
 
 class FallacyAdmin extends AdminSubsController
 {

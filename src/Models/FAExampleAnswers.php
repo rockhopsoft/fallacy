@@ -14,6 +14,6 @@ class FAExampleAnswers extends Model
 		'ExaAnsFallacyID', 
     ];
     
-    // END SurvLoop auto-generated portion of Model
+    // END Survloop auto-generated portion of Model
     
 }

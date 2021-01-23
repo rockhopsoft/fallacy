@@ -7,9 +7,10 @@ use Fallacy\Controllers\FallacyGame;
 class Fallacy extends FallacyGame
 {
     
-    protected function customNodePrint($nID = -3, $tmpSubTier = [], $nIDtxt = '', $nSffx = '', $currVisib = 1)
+    protected function customNodePrint(&$curr = null)
     {
         $ret = '';
+        $nID = $curr->nID;
         if ($nID == 72) {
             $ret .= $this->printFallacyList($nID);
         } elseif ($nID == 75) {

@@ -14,6 +14,6 @@ class FAFallacyParents extends Model
 		'FalParChildID', 
     ];
     
-    // END SurvLoop auto-generated portion of Model
+    // END Survloop auto-generated portion of Model
     
 }

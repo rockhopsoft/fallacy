@@ -30,7 +30,7 @@ class FallacySeeder extends Seeder
 			'TblDatabase' => '1',
 			'TblName' => 'users',
 			'TblEng' => 'Users',
-			'TblDesc' => 'This represents the Laravel Users table, but will not actually be implemented by SurvLoop as part of the database installation.',
+			'TblDesc' => 'This represents the Laravel Users table, but will not actually be implemented by Survloop as part of the database installation.',
 			'TblGroup' => 'Users',
 			'TblOrd' => '10',
 			'TblNumForeignIn' => '4'

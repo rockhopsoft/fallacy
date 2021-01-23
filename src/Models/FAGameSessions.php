@@ -21,6 +21,6 @@ class FAGameSessions extends Model
 		'SesDifficulty', 
     ];
     
-    // END SurvLoop auto-generated portion of Model
+    // END Survloop auto-generated portion of Model
     
 }

@@ -14,6 +14,6 @@ class FAExampleImgLnks extends Model
 		'ExaImgLnkImageID', 
     ];
     
-    // END SurvLoop auto-generated portion of Model
+    // END Survloop auto-generated portion of Model
     
 }

@@ -5,7 +5,7 @@ use Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Models\FAFallacies;
-use SurvLoop\Controllers\Tree\TreeSurvForm;
+use RockHopSoft\Survloop\Controllers\Tree\TreeSurvForm;
 
 class FallacyUtils extends TreeSurvForm
 {

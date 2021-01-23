@@ -26,6 +26,6 @@ class FAExamples extends Model
 		'ExaIsMobile', 
     ];
     
-    // END SurvLoop auto-generated portion of Model
+    // END Survloop auto-generated portion of Model
     
 }

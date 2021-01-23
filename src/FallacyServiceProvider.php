@@ -15,7 +15,7 @@ class FallacyServiceProvider extends ServiceProvider
               __DIR__.'/Uploads' => base_path('storage/app/up/fallacy'),
               __DIR__.'/Database/2019_11_16_000000_create_fallacy_tables.php'
                   => base_path('database/migrations/2019_11_16_000000_create_fallacy_tables.php'),
-              __DIR__.'/Database/FallacySeeder.php' => base_path('database/seeds/FallacySeeder.php')
+              __DIR__.'/Database/FallacySeeder.php' => base_path('database/seeders/FallacySeeder.php')
         ]);
     }
 }
